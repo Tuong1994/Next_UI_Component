@@ -1,0 +1,288 @@
+// Single upload
+.single-image-upload {
+  width: min-content;
+  .upload-group {
+    width: $w-10;
+    height: $h-10;
+    overflow: hidden;
+    border: 1px dashed $bg-gray;
+    transition: all $transition-time-md $transition-fn;
+    .group-control {
+      width: $w-full;
+      height: $h-full;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .control-input {
+        display: none;
+      }
+      .control-icon {
+        path {
+          color: $text-gray;
+          transition: all $transition-time-md $transition-fn;
+        }
+      }
+    }
+    .group-loading {
+      width: $w-full;
+      height: $h-full;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .upload-group-dragged {
+    opacity: 0.4;
+  }
+  .upload-group-error {
+    border-color: $bg-red;
+    .control-icon {
+      path {
+        color: $text-red !important;
+      }
+    }
+    &:hover {
+      border-color: $bg-red !important;
+    }
+  }
+  .upload-group-disabled {
+    background: $bg-slate;
+    .group-control {
+      cursor: not-allowed;
+    }
+    &:hover {
+      border-color: $bg-gray !important;
+    }
+    path {
+      color: $text-gray !important;
+    }
+  }
+}
+
+// Multiple
+.multiple-image-upload {
+  .upload-group {
+    width: $w-full;
+    padding: $p-3;
+    border: 1px dashed $bg-gray;
+    transition: all $transition-time-md $transition-fn;
+    .group-control {
+      width: $w-full;
+      cursor: pointer;
+      .control-input {
+        display: none;
+      }
+      .control-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        * {
+          color: $text-gray;
+          transition: all $transition-time-md $transition-fn;
+        }
+        .label-icon {
+          margin-bottom: $m-1;
+        }
+      }
+    }
+  }
+  .upload-group-dragged {
+    opacity: 0.4;
+  }
+  .upload-group-error {
+    border-color: $bg-red;
+    .control-label {
+      * {
+        color: $text-red !important;
+      }
+    }
+    &:hover {
+      border-color: $bg-red !important;
+    }
+  }
+  .upload-group-disabled {
+    background: $bg-slate;
+    .group-control {
+      cursor: not-allowed;
+    }
+    &:hover {
+      border-color: $bg-gray !important;
+    }
+    &:hover .control-label {
+      color: $text-gray !important;
+    }
+    * {
+      color: $text-gray !important;
+    }
+  }
+  .upload-view-area {
+    width: $w-full;
+    .area-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+
+// Gap
+.single-image-upload-gap,
+.multiple-image-upload-gap {
+  margin-bottom: $m-1 + 0.5;
+}
+
+// Shape
+.single-image-upload-square,
+.multiple-image-upload-square {
+  .upload-group {
+    border-radius: $rounded-md;
+  }
+}
+
+.single-image-upload-round {
+  .upload-group {
+    border-radius: $rounded-full;
+  }
+}
+
+.multiple-image-upload-round {
+  .upload-group {
+    border-radius: $rounded-xxl;
+  }
+}
+
+// Color
+.single-image-upload-blue,
+.multiple-image-upload-blue {
+  .upload-group {
+    &:hover {
+      border-color: $bg-blue;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-blue;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-blue;
+      }
+    }
+  }
+}
+
+.single-image-upload-red,
+.multiple-image-upload-red {
+  .upload-group {
+    &:hover {
+      border-color: $bg-red;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-red;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-red;
+      }
+    }
+  }
+}
+
+.single-image-upload-green,
+.multiple-image-upload-green {
+  .upload-group {
+    &:hover {
+      border-color: $bg-green;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-green;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-green;
+      }
+    }
+  }
+}
+
+.single-image-upload-orange,
+.multiple-image-upload-orange {
+  .upload-group {
+    &:hover {
+      border-color: $bg-orange;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-orange;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-orange;
+      }
+    }
+  }
+}
+
+.single-image-upload-yellow,
+.multiple-image-upload-yellow {
+  .upload-group {
+    &:hover {
+      border-color: $bg-yellow;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-yellow;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-yellow;
+      }
+    }
+  }
+}
+
+.single-image-upload-purple,
+.multiple-image-upload-purple {
+  .upload-group {
+    &:hover {
+      border-color: $bg-purple;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-purple;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-purple;
+      }
+    }
+  }
+}
+
+.single-image-upload-pink,
+.multiple-image-upload-pink {
+  .upload-group {
+    &:hover {
+      border-color: $bg-pink;
+    }
+    &:hover .control-icon {
+      path {
+        color: $text-pink;
+      }
+    }
+    &:hover .control-label {
+      * {
+        color: $text-pink;
+      }
+    }
+  }
+}

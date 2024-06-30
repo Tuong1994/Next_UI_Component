@@ -1,0 +1,135 @@
+.toast-message {
+  width: max-content;
+  padding: $p-2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  .message-item {
+    min-width: max-content;
+    width: $w-10 * 3;
+    padding: $p-1 $p-2;
+    margin-bottom: $m-1;
+    background: $bg-white;
+    box-shadow: 0 0 10px $bg-gray;
+    border-left: 4px solid transparent;
+    border-radius: $rounded;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: all $transition-time-sm $transition-fn;
+    animation: slideRightIn $transition-time-sm $transition-fn;
+    &:last-child {
+      margin: 0;
+    }
+    .item-content {
+      width: $w-full;
+      display: flex;
+      .content-icon {
+        margin-right: $m-2;
+        display: flex;
+        justify-content: center;
+      }
+      .content-message {
+        width: $w-full;
+        .message-text {
+          margin-bottom: $m-1 + 0.5;
+        }
+        .message-progress {
+          width: $w-full;
+          height: 4px;
+          position: relative;
+          .progress-bar {
+            height: $h-full;
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: drainOut 4s linear forwards;
+          }
+        }
+      }
+    }
+    .item-action {
+      border: unset;
+      background: transparent;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 1;
+      &:hover path {
+        opacity: 0.6;
+      }
+      path {
+        transition: opacity $transition-time-sm $transition-fn;
+      }
+    }
+  }
+  .message-item-hide {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .message-item-success {
+    border-color: $bg-green;
+    .content-icon {
+      path {
+        color: $text-green;
+      }
+    }
+    .progress-bar {
+      background: $bg-green;
+    }
+  }
+  .message-item-error {
+    border-color: $bg-red;
+    .content-icon {
+      path {
+        color: $text-red;
+      }
+    }
+    .progress-bar {
+      background: $bg-red;
+    }
+  }
+  .message-item-warning {
+    border-color: $bg-orange;
+    .content-icon {
+      path {
+        color: $text-orange;
+      }
+    }
+    .progress-bar {
+      background: $bg-orange;
+    }
+  }
+  .message-item-info {
+    border-color: $bg-blue;
+    .content-icon {
+      path {
+        color: $text-blue;
+      }
+    }
+    .progress-bar {
+      background: $bg-blue;
+    }
+  }
+}
+
+@keyframes drainOut {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes slideRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

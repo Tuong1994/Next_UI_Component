@@ -1,0 +1,229 @@
+.textarea {
+  .textarea-label {
+    margin-bottom: $m-1 - 0.5;
+    .label-required {
+      margin-right: $m-1 - 0.5;
+      color: $text-red;
+    }
+    .label-optional {
+      margin-left: $m-1 - 0.5;
+      color: $text-gray;
+      font-size: $text-xs;
+    }
+  }
+  .textarea-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 0.5px solid $bg-gray;
+    background: $bg-white;
+    transition: all $transition-time-md $transition-fn;
+    .group-control {
+      width: $w-full;
+      display: flex;
+      .control-box {
+        width: $w-full;
+        border: unset;
+        background: transparent;
+      }
+      .control-action {
+        cursor: pointer;
+        margin-left: $m-1 - 0.5;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 1;
+        &:hover path {
+          color: $text-black;
+        }
+        path {
+          color: $text-gray;
+          transition: color $transition-time-md $transition-fn;
+        }
+      }
+    }
+  }
+}
+
+// Disabled
+.textarea-disabled {
+  .textarea-label {
+    color: $text-gray;
+    * {
+      color: $text-gray;
+    }
+  }
+  .textarea-group {
+    background: $bg-slate;
+    &:hover {
+      border-color: $bg-gray !important;
+    }
+    .control-box {
+      color: $text-gray;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Error
+.textarea-error {
+  .textarea-label {
+    color: $text-red;
+    * {
+      color: $text-red;
+    }
+  }
+  // .textarea-group {
+  //   border-color: $bg-red !important;
+  // }
+}
+
+// Size
+.textarea-sm {
+  .textarea-label {
+    font-size: $text-xs;
+    * {
+      font-size: $text-xs;
+    }
+  }
+  .textarea-group {
+    padding: $p-1 - 0.8 $p-1 - 0.4;
+    .group-control {
+      * {
+        font-size: $text-xs;
+      }
+    }
+  }
+}
+
+.textarea-md {
+  .textarea-group {
+    padding: $p-1 - 0.6 $p-1 - 0.2;
+  }
+}
+
+.textarea-lg {
+  .textarea-label {
+    font-size: $text-md;
+    * {
+      font-size: $text-md;
+    }
+  }
+  .textarea-group {
+    padding: $p-1 - 0.4 $p-1;
+    .group-control {
+      * {
+        font-size: $text-md;
+      }
+    }
+  }
+}
+
+// Shape
+.textarea-square {
+  .textarea-group {
+    border-radius: $rounded;
+  }
+}
+
+.textarea-round {
+  .textarea-group {
+    border-radius: $rounded-lg;
+  }
+}
+
+// Color
+.textarea-blue {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-blue;
+    }
+    &:focus-within {
+      border-color: $bg-blue;
+    }
+  }
+}
+
+.textarea-red {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-red;
+    }
+    &:focus-within {
+      border-color: $bg-red;
+    }
+  }
+}
+
+.textarea-green {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-green;
+    }
+    &:focus-within {
+      border-color: $bg-green;
+    }
+  }
+}
+
+.textarea-orange {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-orange;
+    }
+    &:focus-within {
+      border-color: $bg-orange;
+    }
+  }
+}
+
+.textarea-yellow {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-yellow;
+    }
+    &:focus-within {
+      border-color: $bg-yellow;
+    }
+  }
+}
+
+.textarea-purple {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-purple;
+    }
+    &:focus-within {
+      border-color: $bg-purple;
+    }
+  }
+}
+
+.textarea-pink {
+  .textarea-group {
+    &:hover {
+      border-color: $bg-pink;
+    }
+    &:focus-within {
+      border-color: $bg-pink;
+    }
+  }
+}
+
+// Theme
+.textarea-light {
+  .textarea-group {
+    background: $bg-white;
+  }
+}
+
+.textarea-dark {
+  .textarea-group {
+    background: $bg-deep-blue;
+    .control-action {
+      &:hover path {
+        color: $text-white !important;
+      }
+    }
+  }
+}

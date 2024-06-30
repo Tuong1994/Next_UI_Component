@@ -1,0 +1,121 @@
+.avatar {
+  position: relative;
+  .avatar-badge,
+  .avatar-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg-red;
+    border: 0.5px solid $bg-white;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    z-index: 1;
+  }
+  .avatar-badge {
+    width: $w-1 + 0.5;
+    height: $h-1 + 0.5;
+    border-radius: $rounded-full;
+    font-size: $text-xs;
+    color: $text-white;
+    top: -5px;
+    right: -5px;
+  }
+  .avatar-badge-radius {
+    width: auto;
+    padding: $p-1 - 0.8;
+    right: unset;
+    left: 70%;
+    border-radius: $rounded-xxl;
+  }
+  .avatar-dot {
+    width: $w-1;
+    height: $h-1;
+    border-radius: $rounded-full;
+  }
+  .avatar-content {
+    width: $w-full;
+    height: $h-full;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border: 0.5px solid $bg-gray;
+    color: $text-white;
+    font-weight: $font-medium;
+    font-size: $text-lg;
+    path {
+      color: $text-white;
+    }
+  }
+}
+
+// Shape
+.avatar-square {
+  .avatar-content {
+    border-radius: $rounded-md;
+  }
+}
+
+.avatar-circle {
+  .avatar-content {
+    border-radius: $rounded-full;
+  }
+}
+
+// Color
+.avatar-blue {
+  .avatar-content {
+    border-color: $bg-blue;
+    background: $bg-blue;
+  }
+}
+
+.avatar-green {
+  .avatar-content {
+    border-color: $bg-green;
+    background: $bg-green;
+  }
+}
+
+.avatar-red {
+  .avatar-content {
+    border-color: $bg-red;
+    background: $bg-red;
+  }
+}
+
+.avatar-orange {
+  .avatar-content {
+    border-color: $bg-orange;
+    background: $bg-orange;
+  }
+}
+
+.avatar-yellow {
+  .avatar-content {
+    border-color: $bg-yellow;
+    background: $bg-yellow;
+  }
+}
+
+.avatar-purple {
+  .avatar-content {
+    border-color: $bg-purple;
+    background: $bg-purple;
+  }
+}
+
+.avatar-pink {
+  .avatar-content {
+    border-color: $bg-pink;
+    background: $bg-pink;
+  }
+}
+
+.avatar-black {
+  .avatar-content {
+    border-color: $bg-black;
+    background: $bg-black;
+  }
+}

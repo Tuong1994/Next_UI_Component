@@ -1,0 +1,74 @@
+.skeleton {
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  background-color: $bg-gray;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba($bg-white, 0) 0,
+      rgba($bg-white, 0.2) 20%,
+      rgba($bg-white, 0.5) 60%,
+      rgba($bg-white, 0)
+    );
+    animation: shimmer 1s infinite;
+    content: "";
+  }
+}
+
+// Shape
+.skeleton-square {
+  border-radius: $rounded;
+}
+
+.skeleton-round.skeleton-paragraph-line {
+  border-radius: $rounded-lg;
+}
+
+.skeleton-round.skeleton-title,
+.skeleton-round.skeleton-button {
+  border-radius: $rounded-xxl;
+}
+
+.skeleton-circle {
+  border-radius: $rounded-full;
+}
+
+// Type
+.skeleton-title {
+  width: $w-10 + 0.5;
+  height: $h-2 + 0.5;
+  margin-bottom: $m-1 + 0.5;
+}
+
+.skeleton-paragraph {
+  width: $w-full;
+  margin: $m-1 0;
+  .skeleton-paragraph-line {
+    width: $w-full;
+    height: $h-1 + 0.5;
+    margin-bottom: $m-1;
+    &:last-child {
+      margin: 0;
+      width: calc($w-full - 20%);
+    }
+  }
+}
+
+.skeleton-button {
+  width: $w-10;
+  height: $h-4;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

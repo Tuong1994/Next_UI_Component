@@ -1,0 +1,55 @@
+.card {
+  width: $w-full;
+  transition: all $transition-time-sm $transition-fn;
+  .card-head,
+  .card-body {
+    padding: $p-2;
+    transition: all $transition-time-sm $transition-fn;
+    @include respond(mdPhone) {
+      padding: $p-2 $p-1;
+    }
+  }
+  .card-head {
+    border-top-left-radius: $rounded;
+    border-top-right-radius: $rounded;
+    border: 0.5px solid $bg-slate;
+    border-bottom: unset;
+  }
+  .card-body {
+    border-bottom-left-radius: $rounded;
+    border-bottom-right-radius: $rounded;
+    border: 0.5px solid $bg-slate;
+  }
+}
+
+.card-no-head {
+  .card-body {
+    border-radius: $rounded;
+  }
+}
+
+.card-hover {
+  &:hover {
+    box-shadow: 5px 5px 15px $bg-gray;
+  }
+}
+
+.card-light {
+  .card-head,
+  .card-body {
+    background: $bg-white;
+  }
+}
+
+.card-dark {
+  .card-head,
+  .card-body {
+    background: $bg-deep-blue;
+  }
+}
+
+.card-dark.card-hover {
+  &:hover {
+    box-shadow: 5px 5px 15px $bg-black;
+  }
+}

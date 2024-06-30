@@ -1,0 +1,85 @@
+.navlink {
+  display: block;
+  padding: $p-1 - 0.4 $p-1;
+  border-radius: $rounded;
+  transition: all $transition-time-xs $transition-fn;
+  &:hover {
+    color: $text-white;
+  }
+}
+
+.navlink.navlink-active {
+  color: $text-white;
+}
+
+// Color hover
+.navlink-blue {
+  &:hover {
+    background: $bg-blue;
+  }
+}
+
+.navlink-red {
+  &:hover {
+    background: $bg-red;
+  }
+}
+
+.navlink-green {
+  &:hover {
+    background: $bg-green;
+  }
+}
+
+.navlink-orange {
+  &:hover {
+    background: $bg-orange;
+  }
+}
+
+.navlink-yellow {
+  &:hover {
+    background: $bg-yellow;
+  }
+}
+
+.navlink-pink {
+  &:hover {
+    background: $bg-pink;
+  }
+}
+
+.navlink-purple {
+  &:hover {
+    background: $bg-purple;
+  }
+}
+
+// Color active
+.navlink-blue.navlink-active {
+  background: $bg-blue;
+}
+
+.navlink-red.navlink-active {
+  background: $bg-red;
+}
+
+.navlink-green.navlink-active {
+  background: $bg-green;
+}
+
+.navlink-orange.navlink-active {
+  background: $bg-orange;
+}
+
+.navlink-yellow.navlink-active {
+  background: $bg-yellow;
+}
+
+.navlink-pink.navlink-active {
+  background: $bg-pink;
+}
+
+.navlink-purple.navlink-active {
+  background: $bg-purple;
+}

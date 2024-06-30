@@ -1,0 +1,169 @@
+.image {
+  width: max-content;
+  transition: all $transition-time-md $transition-fn;
+  .image-group {
+    border-radius: $rounded;
+    overflow: hidden;
+    position: relative;
+    animation: fade $transition-time-md $transition-fn 1;
+    &:hover .group-actions,
+    &:hover .group-check {
+      opacity: 1;
+    }
+    .group-view {
+      display: block;
+      width: $w-full;
+      height: $h-full;
+      transition: transform $transition-time-md $transition-fn;
+    }
+    .group-view-checked {
+      transform: scale(0.9);
+    }
+    .group-actions {
+      width: $w-full;
+      height: $h-full;
+      background: $bg-black-rgba-lg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity $transition-time-md $transition-fn;
+      .actions-icon {
+        cursor: pointer;
+        transition: opacity $transition-time-md $transition-fn;
+        &:hover {
+          opacity: 0.6;
+        }
+        &:nth-child(2) {
+          margin-left: $m-2;
+        }
+        path {
+          color: $text-white;
+        }
+      }
+    }
+    .group-check {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity $transition-time-md $transition-fn;
+      .group-checked {
+        border-color: $bg-blue;
+      }
+    }
+    .group-check-checked {
+      opacity: 1;
+    }
+  }
+  .image-loading {
+    border-radius: $rounded;
+    background: $bg-slate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade $transition-time-md $transition-fn 1;
+    svg {
+      path {
+        color: $text-gray;
+      }
+    }
+  }
+}
+
+.image-checked {
+  background: $bg-gray;
+}
+
+// Object fit
+.image-fill {
+  .group-view {
+    object-fit: fill;
+  }
+}
+
+.image-cover {
+  .group-view {
+    object-fit: cover;
+  }
+}
+
+.image-contain {
+  .group-view {
+    object-fit: contain;
+  }
+}
+
+.image-none {
+  .group-view {
+    object-fit: none;
+  }
+}
+
+// Popup
+.image-popup {
+  width: $w-full;
+  height: $h-screen;
+  background: $bg-black-rgba-md;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  transition: all $transition-time-sm $transition-fn;
+  .popup-head {
+    width: $w-full;
+    height: $h-5;
+    padding: 0 $p-2;
+    background: $bg-black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    * {
+      color: $text-white;
+    }
+    svg {
+      margin: 0 $m-2;
+      cursor: pointer;
+      transition: opacity $transition-time-md $transition-fn;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .popup-view {
+    width: $w-full;
+    height: calc($h-screen - $h-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .view-image {
+      width: $w-10 * 6;
+      height: $h-10 * 4;
+      object-fit: contain;
+      border: 0.5px dashed $bg-gray;
+      border-radius: $rounded;
+      transition: transform $transition-time-md $transition-fn;
+      @include respond(smTablet) {
+        width: $w-10 * 4;
+        height: $h-10 * 3;
+      }
+      @include respond(mdPhone) {
+        width: $w-10 * 3;
+        height: $h-10 * 2;
+      }
+    }
+  }
+}
+
+.image-popup-active {
+  opacity: 1;
+  visibility: visible;
+  animation: fade $transition-time-sm $transition-fn;
+}

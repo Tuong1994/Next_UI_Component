@@ -1,0 +1,27 @@
+.list {
+  .list-title {
+    padding-bottom: $p-1;
+    margin-bottom: $m-1 + 0.5;
+    font-size: $text-md;
+    font-weight: $font-semibold;
+    border-bottom: 0.5px solid $bg-gray;
+  }
+  .list-inner {
+    list-style: none;
+  }
+}
+
+.list-item {
+  margin-bottom: $m-1;
+  display: flex;
+  align-items: baseline;
+  &:last-child {
+    margin: 0;
+  }
+  .item-icon {
+    margin-right: $m-1 + 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

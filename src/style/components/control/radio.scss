@@ -1,0 +1,265 @@
+.radio {
+  width: max-content;
+  .radio-group {
+    display: flex;
+    .group-control {
+      display: none;
+    }
+    .group-checked {
+      border: 0.5px solid $bg-gray;
+      border-radius: $rounded-full;
+      position: relative;
+      cursor: pointer;
+      transition: all $transition-time-sm $transition-fn;
+      &::after {
+        content: "";
+        border-radius: $rounded-full;
+        background: $bg-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .group-label {
+      margin-left: $m-1;
+      .label-required {
+        margin-right: $m-1 - 0.5;
+        color: $text-red;
+      }
+      .label-optional {
+        margin-left: $m-1 - 0.5;
+        color: $text-gray;
+        font-size: $text-xs;
+      }
+    }
+  }
+  .radio-group-error {
+    // .group-checked {
+    //   border-color: $bg-red;
+    // }
+    .group-label {
+      color: $text-red;
+      * {
+        color: $text-red;
+      }
+    }
+  }
+  .radio-group-disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    &:hover .group-checked {
+      border-color: $bg-gray !important;
+    }
+    .group-checked {
+      border-color: $bg-gray;
+      background: $bg-gray;
+      user-select: none;
+      cursor: not-allowed;
+    }
+    .group-label {
+      color: $text-gray;
+      * {
+        color: $text-gray;
+      }
+    }
+  }
+}
+
+.radio-gap {
+  margin-bottom: $m-1 + 0.5;
+}
+
+// Size
+.radio-sm {
+  .group-checked {
+    width: $w-2 - 0.5;
+    height: $h-2 - 0.5;
+    &::after {
+      width: $w-1 - 0.5;
+      height: $h-1 - 0.5;
+    }
+  }
+  .group-label {
+    font-size: $text-xs;
+    * {
+      font-size: $text-xs;
+    }
+  }
+}
+
+.radio-md {
+  .group-checked {
+    width: $w-2;
+    height: $h-2;
+    &::after {
+      width: $w-1;
+      height: $h-1;
+    }
+  }
+}
+
+.radio-lg {
+  .group-checked {
+    width: $w-2 + 0.5;
+    height: $h-2 + 0.5;
+    &::after {
+      width: $w-1;
+      height: $h-1;
+    }
+  }
+  .group-label {
+    font-size: $text-md;
+    * {
+      font-size: $text-md;
+    }
+  }
+}
+
+// Color
+.radio-blue {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-blue;
+        border-color: $bg-blue;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-blue;
+    }
+  }
+}
+
+.radio-red {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-red;
+        border-color: $bg-red;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-red;
+    }
+  }
+}
+
+.radio-green {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-green;
+        border-color: $bg-green;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-green;
+    }
+  }
+}
+
+.radio-orange {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-orange;
+        border-color: $bg-orange;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-orange;
+    }
+  }
+}
+
+.radio-yellow {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-yellow;
+        border-color: $bg-yellow;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-yellow;
+    }
+  }
+}
+
+.radio-purple {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-purple;
+        border-color: $bg-purple;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-purple;
+    }
+  }
+}
+
+.radio-pink {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-pink;
+        border-color: $bg-pink;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-pink;
+    }
+  }
+}
+
+.radio-black {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-black;
+        border-color: $bg-black;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-black;
+    }
+  }
+}
+
+.radio-white {
+  .radio-group {
+    .group-control {
+      &:checked ~ .group-checked {
+        background: $bg-white;
+        border-color: $bg-white;
+      }
+      &:checked ~ .group-checked::after {
+        background: $bg-black;
+      }
+    }
+    &:hover .group-checked {
+      border-color: $bg-white;
+    }
+  }
+}
+
+// Theme
+.radio-light {
+  .group-checked {
+    &::after {
+      background: $bg-white;
+    }
+  }
+}
+
+.radio-dark {
+  .group-checked {
+    &::after {
+      background: $bg-deep-blue !important;
+    }
+  }
+}

@@ -1,0 +1,378 @@
+.table {
+  width: $w-full;
+  box-shadow: 0 0 5px $bg-gray;
+  position: relative;
+  .table-content {
+    width: $w-full;
+    border-radius: $rounded;
+    overflow-x: auto;
+    table {
+      width: $w-full;
+      border-collapse: collapse;
+      thead {
+        tr {
+          * {
+            color: $text-white;
+          }
+          th {
+            min-width: max-content;
+            .table-cell {
+              padding: $p-1 - 0.4 $p-1;
+              font-size: $text-sm;
+              .cell-checked-mixed {
+                width: $w-2;
+                height: $h-2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $bg-white;
+                border: 0.5px solid $bg-white;
+                border-radius: $rounded;
+                cursor: pointer;
+                * {
+                  color: $text-black;
+                }
+              }
+            }
+            .table-head-remove-actions {
+              display: flex;
+              align-items: center;
+              .actions-btn {
+                &:nth-child(1) {
+                  margin-right: $m-1;
+                }
+                &:nth-child(2) {
+                  * {
+                    color: $text-black !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          background: $bg-white;
+          border-bottom: 0.5px solid $bg-gray;
+          transition: background $transition-time-md $transition-fn;
+          &:hover {
+            background: $bg-slate;
+          }
+          td {
+            .table-cell {
+              padding: $p-1;
+            }
+          }
+        }
+      }
+      .table-cell {
+        min-width: max-content;
+        width: $w-full;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: $text-2xs;
+        * {
+          margin: 0;
+        }
+        .cell-expand-action {
+          width: $w-2;
+          height: $h-2;
+          border: 0.5px solid $bg-gray;
+          border-radius: $rounded;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .action-icon {
+            width: $w-1;
+            height: $h-1;
+            position: relative;
+            &::after,
+            &::before {
+              content: "";
+              background: $bg-black-rgba-md;
+              position: absolute;
+              transition: all $transition-time-sm $transition-fn;
+            }
+            &::before {
+              width: 2px;
+              height: $h-full;
+              top: 0;
+              left: 50%;
+              margin-left: -1px;
+            }
+            &::after {
+              width: $w-full;
+              height: 2px;
+              top: 50%;
+              left: 0;
+              margin-top: -1px;
+            }
+          }
+        }
+        .cell-expand-action-expanded {
+          .action-icon {
+            &::before {
+              transform: rotate(90deg);
+            }
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      .table-row-expand {
+        thead {
+          tr {
+            background: $bg-blue;
+            * {
+              color: $text-white;
+            }
+            th {
+              .table-cell {
+                padding: $p-1 - 0.4 $p-1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .table-filter {
+    padding: $p-1 - 0.5;
+    margin-bottom: $m-1;
+    border-radius: $rounded;
+    background: $bg-slate;
+    transition: all $transition-time-sm $transition-fn;
+  }
+  .table-empty {
+    width: $w-full;
+    height: $h-10 * 2;
+    background: $bg-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all $transition-time-sm $transition-fn;
+    * {
+      color: $text-gray;
+    }
+    span {
+      margin-top: $m-1;
+    }
+  }
+  .table-loading {
+    width: $w-full;
+    height: $h-full;
+    background: $bg-white-rgba-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    animation: fade $transition-time-sm $transition-fn;
+  }
+}
+
+.table-pagination {
+  margin-top: $m-2;
+}
+
+// Theme
+.table-dark {
+  box-shadow: 0 0 5px $bg-black;
+  .table-content {
+    table {
+      tbody {
+        tr {
+          background: $bg-deep-blue;
+          border-color: $bg-black;
+          &:hover {
+            background: $bg-black;
+          }
+        }
+      }
+      .table-cell {
+        .cell-expand-action {
+          .action-icon {
+            &::after,
+            &::before {
+              background: $bg-white-rgba-md !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .table-empty {
+    background: $bg-deep-blue;
+  }
+  .table-filter {
+    background: $bg-black;
+  }
+}
+
+// Color
+.table-blue {
+  .table-content {
+    thead {
+      tr {
+        background: $bg-blue;
+      }
+    }
+  }
+  .table-row-selected {
+    background: $bg-blue-rgba-xs !important;
+  }
+}
+
+.table-green {
+  .table-content {
+    thead {
+      tr {
+        background: $bg-green;
+      }
+    }
+  }
+  .table-row-selected {
+    background: $bg-green-rgba-xs !important;
+  }
+}
+
+.table-orange {
+  .table-content {
+    thead {
+      tr {
+        background: $bg-orange;
+      }
+    }
+  }
+  .table-row-selected {
+    background: $bg-orange-rgba-xs !important;
+  }
+}
+
+.table-yellow {
+  .table-content {
+    thead {
+      tr {
+        background: $bg-yellow;
+      }
+    }
+  }
+  .table-row-selected {
+    background: $bg-yellow-rgba-xs !important;
+  }
+}
+
+.table-purple {
+  .table-content {
+    thead {
+      tr {
+        background: $bg-purple;
+      }
+    }
+  }
+  .table-row-selected {
+    background: $bg-purple-rgba-xs !important;
+  }
+}
+
+.table-pink {
+  .table-content {
+    thead {
+      tr {
+        background: $bg-pink;
+      }
+    }
+  }
+  .table-row-selected {
+    background: $bg-pink-rgba-xs !important;
+  }
+}
+
+// Expand color
+.table-row-expand {
+  .table-blue {
+    .table-content {
+      thead {
+        tr {
+          background: $bg-blue !important;
+        }
+      }
+    }
+    .table-row-selected {
+      background: $bg-blue-rgba-xs !important;
+    }
+  }
+
+  .table-green {
+    .table-content {
+      thead {
+        tr {
+          background: $bg-green !important;
+        }
+      }
+    }
+    .table-row-selected {
+      background: $bg-green-rgba-xs !important;
+    }
+  }
+
+  .table-orange {
+    .table-content {
+      thead {
+        tr {
+          background: $bg-orange !important;
+        }
+      }
+    }
+    .table-row-selected {
+      background: $bg-orange-rgba-xs !important;
+    }
+  }
+
+  .table-yellow {
+    .table-content {
+      thead {
+        tr {
+          background: $bg-yellow !important;
+        }
+      }
+    }
+    .table-row-selected {
+      background: $bg-yellow-rgba-xs !important;
+    }
+  }
+
+  .table-purple {
+    .table-content {
+      thead {
+        tr {
+          background: $bg-purple !important;
+        }
+      }
+    }
+    .table-row-selected {
+      background: $bg-purple-rgba-xs !important;
+    }
+  }
+
+  .table-pink {
+    .table-content {
+      thead {
+        tr {
+          background: $bg-pink !important;
+        }
+      }
+    }
+    .table-row-selected {
+      background: $bg-pink-rgba-xs !important;
+    }
+  }
+}

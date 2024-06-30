@@ -1,0 +1,22 @@
+.note-message {
+  margin: $m-1 0;
+}
+
+// Theme
+.note-message-dark {
+  color: $text-white;
+}
+
+// Type
+.note-message-default {
+  color: $text-black;
+}
+
+.note-message-error {
+  color: $text-red;
+}
+
+// Italic
+.note-message-italic {
+  font-style: italic;
+}

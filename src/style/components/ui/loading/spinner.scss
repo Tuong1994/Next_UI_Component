@@ -1,0 +1,127 @@
+// Default
+.spinner-default {
+  animation: spin $transition-time-md $transition-fn infinite;
+}
+
+.spinner-default-blue {
+  path {
+    color: $text-blue;
+  }
+}
+
+.spinner-default-green {
+  path {
+    color: $text-green;
+  }
+}
+
+.spinner-default-red {
+  path {
+    color: $text-red;
+  }
+}
+
+.spinner-default-yellow {
+  path {
+    color: $text-yellow;
+  }
+}
+
+.spinner-default-purple {
+  path {
+    color: $text-purple;
+  }
+}
+
+.spinner-default-pink {
+  path {
+    color: $text-pink;
+  }
+}
+
+.spinner-default-black {
+  path {
+    color: $text-black;
+  }
+}
+
+.spinner-default-gray {
+  path {
+    color: $text-gray;
+  }
+}
+
+.spinner-default-white {
+  path {
+    color: $text-white;
+  }
+}
+
+// Bubble
+.spinner-bubble {
+  width: max-content;
+  animation: spin $transition-time-lg $transition-fn infinite;
+  .bubble-item {
+    display: flex;
+    .item-dot {
+      width: $w-1;
+      height: $h-1;
+      margin: calc($m-1 - 0.9rem);
+      border-radius: $rounded-full;
+    }
+  }
+}
+
+.spinner-bubble-blue {
+  .item-dot {
+    background: $bg-blue;
+  }
+}
+
+.spinner-bubble-green {
+  .item-dot {
+    background: $bg-green;
+  }
+}
+
+.spinner-bubble-red {
+  .item-dot {
+    background: $bg-red;
+  }
+}
+
+.spinner-bubble-yellow {
+  .item-dot {
+    background: $bg-yellow;
+  }
+}
+
+.spinner-bubble-purple {
+  .item-dot {
+    background: $bg-purple;
+  }
+}
+
+.spinner-bubble-pink {
+  .item-dot {
+    background: $bg-pink;
+  }
+}
+
+.spinner-bubble-black {
+  .item-dot {
+    background: $bg-black;
+  }
+}
+
+.spinner-bubble-gray {
+  .item-dot {
+    background: $bg-gray;
+  }
+}
+
+.spinner-bubble-white {
+  .item-dot {
+    background: $bg-white;
+  }
+}

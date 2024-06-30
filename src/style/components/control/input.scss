@@ -1,0 +1,242 @@
+.input {
+  .input-label {
+    margin-bottom: $m-1 - 0.5;
+    .label-required {
+      margin-right: $m-1 - 0.5;
+      color: $text-red;
+    }
+    .label-optional {
+      margin-left: $m-1 - 0.5;
+      color: $text-gray;
+      font-size: $text-xs;
+    }
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+    border: 0.5px solid $bg-gray;
+    background: $bg-white;
+    transition: all $transition-time-md $transition-fn;
+    .group-addon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .group-addon-before {
+      border-right: 0.5px solid $bg-gray;
+      padding-right: $p-1;
+      margin-right: $m-1;
+    }
+    .group-addon-after {
+      border-left: 0.5px solid $bg-gray;
+      padding-left: $p-1;
+      margin-left: $m-1;
+    }
+    .group-control {
+      width: $w-full;
+      display: flex;
+      .control-box {
+        width: $w-full;
+        border: unset;
+        background: transparent;
+      }
+      .control-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: $m-1 - 0.5;
+        &:hover path {
+          color: $text-black;
+        }
+        path {
+          color: $text-gray;
+          transition: color $transition-time-md $transition-fn;
+        }
+      }
+    }
+  }
+}
+
+// Disabled
+.input-disabled {
+  .input-label {
+    color: $text-gray;
+    * {
+      color: $text-gray;
+    }
+  }
+  .input-group {
+    background: $bg-slate;
+    &:hover {
+      border-color: $bg-gray !important;
+    }
+    .control-box {
+      color: $text-gray;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Error
+.input-error {
+  .input-label {
+    color: $text-red;
+    * {
+      color: $text-red;
+    }
+  }
+  // .input-group {
+  //   border-color: $bg-red !important;
+  // }
+}
+
+// Size
+.input-sm {
+  .input-label {
+    font-size: $text-xs;
+    * {
+      font-size: $text-xs;
+    }
+  }
+  .input-group {
+    padding: $p-1 - 0.8 $p-1 - 0.4;
+    .group-control {
+      * {
+        font-size: $text-xs;
+      }
+    }
+  }
+}
+
+.input-md {
+  .input-group {
+    padding: $p-1 - 0.6 $p-1 - 0.2;
+  }
+}
+
+.input-lg {
+  .input-label {
+    font-size: $text-md;
+    * {
+      font-size: $text-md;
+    }
+  }
+  .input-group {
+    padding: $p-1 - 0.4 $p-1;
+    .group-control {
+      * {
+        font-size: $text-md;
+      }
+    }
+  }
+}
+
+// Shape
+.input-square {
+  .input-group {
+    border-radius: $rounded;
+  }
+}
+
+.input-round {
+  .input-group {
+    border-radius: $rounded-xxl;
+  }
+}
+
+// Color
+.input-blue {
+  .input-group {
+    &:hover {
+      border-color: $bg-blue;
+    }
+    &:focus-within {
+      border-color: $bg-blue;
+    }
+  }
+}
+
+.input-red {
+  .input-group {
+    &:hover {
+      border-color: $bg-red;
+    }
+    &:focus-within {
+      border-color: $bg-red;
+    }
+  }
+}
+
+.input-green {
+  .input-group {
+    &:hover {
+      border-color: $bg-green;
+    }
+    &:focus-within {
+      border-color: $bg-green;
+    }
+  }
+}
+
+.input-orange {
+  .input-group {
+    &:hover {
+      border-color: $bg-orange;
+    }
+    &:focus-within {
+      border-color: $bg-orange;
+    }
+  }
+}
+
+.input-yellow {
+  .input-group {
+    &:hover {
+      border-color: $bg-yellow;
+    }
+    &:focus-within {
+      border-color: $bg-yellow;
+    }
+  }
+}
+
+.input-purple {
+  .input-group {
+    &:hover {
+      border-color: $bg-purple;
+    }
+    &:focus-within {
+      border-color: $bg-purple;
+    }
+  }
+}
+
+.input-pink {
+  .input-group {
+    &:hover {
+      border-color: $bg-pink;
+    }
+    &:focus-within {
+      border-color: $bg-pink;
+    }
+  }
+}
+
+// Theme
+.input-light {
+  .input-group {
+    background: $bg-white;
+  }
+}
+
+.input-dark {
+  .input-group {
+    background: $bg-deep-blue;
+    .control-action {
+      &:hover path {
+        color: $text-white !important;
+      }
+    }
+  }
+}

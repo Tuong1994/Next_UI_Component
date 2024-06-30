@@ -1,0 +1,30 @@
+.space {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Justify
+.space-start {
+  justify-content: flex-start;
+}
+
+.space-center {
+  justify-content: center;
+}
+
+.space-end {
+  justify-content: flex-end;
+}
+
+// Align
+.space-top {
+  align-items: flex-start;
+}
+
+.space-middle {
+  align-items: center;
+}
+
+.space-bottom {
+  align-items: flex-end;
+}

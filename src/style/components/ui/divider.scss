@@ -1,0 +1,70 @@
+.divider {
+  .divider-horizontal {
+    width: $w-full;
+    height: 1px;
+    margin: $m-2 0;
+    background: $bg-gray;
+    position: relative;
+    .horizontal-content {
+      min-width: max-content;
+      padding: $p-1 - 0.5 $p-1;
+      background: $bg-white;
+      font-weight: $font-semibold;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all $transition-time-sm $transition-fn;
+      * {
+        font-weight: $font-semibold;
+      }
+    }
+  }
+  .divider-vertical {
+    width: 1px;
+    position: relative;
+    margin: 0 $m-1;
+    background: $bg-gray;
+  }
+}
+
+// Placement
+.divider-left {
+  .horizontal-content {
+    left: 10px;
+  }
+}
+
+.divider-center {
+  .horizontal-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.divider-right {
+  .horizontal-content {
+    right: 10px;
+  }
+}
+
+// Plain
+.divider-plain {
+  .divider-horizontal {
+    .horizontal-content {
+      font-weight: $font-regular;
+    }
+  }
+}
+
+// Theme
+.divider-light {
+  .horizontal-content {
+    background: $bg-white;
+  }
+}
+
+.divider-dark {
+  .horizontal-content {
+    background: $bg-deep-blue !important;
+  }
+}

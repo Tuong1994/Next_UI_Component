@@ -1,0 +1,6 @@
+.section {
+  padding: $p-5;
+  @include respond(mdPhone) {
+    padding: $p-5 $p-2;
+  }
+}

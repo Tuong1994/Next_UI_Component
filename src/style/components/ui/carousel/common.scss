@@ -1,0 +1,102 @@
+.carousel {
+  width: $w-full;
+  height: $h-screen;
+  position: relative;
+  &:hover .carousel-action {
+    opacity: 1;
+  }
+  .carousel-action {
+    width: $w-5;
+    height: $h-5;
+    border: unset;
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: all $transition-time-md $transition-fn;
+  }
+  .carousel-action-disabled {
+    user-select: none;
+    cursor: not-allowed;
+    * {
+      color: $text-gray !important;
+    }
+  }
+  .carousel-view {
+    width: $w-full;
+    height: $h-full;
+    overflow: hidden;
+    .view-item {
+      width: $w-full;
+      height: $h-full;
+      border-radius: $rounded;
+      flex-grow: 1;
+      flex-shrink: 0;
+      cursor: grab;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform $transition-time-md $transition-fn;
+    }
+  }
+  .carousel-dots {
+    position: absolute;
+    z-index: 1;
+    .dots-item {
+      width: $w-1;
+      height: $h-1;
+      border-radius: $rounded-full;
+      border: 0.5px solid transparent;
+      cursor: pointer;
+      transition: all $transition-time-md $transition-fn;
+    }
+    .dots-item-active {
+      border-radius: $rounded-xxl;
+    }
+  }
+}
+
+// Theme
+.carousel-dark {
+  .carousel-action {
+    * {
+      color: $text-black;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .carousel-dots {
+    .dots-item {
+      border-color: $bg-black;
+      &:hover {
+        background: $bg-black;
+      }
+    }
+    .dots-item-active {
+      background: $bg-black;
+    }
+  }
+}
+
+.carousel-light {
+  .carousel-action {
+    * {
+      color: $text-white;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .carousel-dots {
+    .dots-item {
+      border-color: $bg-white;
+      &:hover {
+        background: $bg-white;
+      }
+    }
+    .dots-item-active {
+      background: $bg-white;
+    }
+  }
+}

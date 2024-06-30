@@ -1,0 +1,29 @@
+.head {
+  width: $w-full;
+  padding: 0 $p-1;
+  border-bottom: 0.5px solid $bg-gray;
+  transition: all $transition-time-sm $transition-fn;
+}
+
+.head-fixed {
+  height: $h-6;
+  display: flex;
+  // align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 17;
+}
+
+.head-light {
+  background: $bg-white;
+}
+
+.head-dark {
+  background: $bg-deep-blue;
+  border-color: transparent;
+  box-shadow: 0 2px 5px $bg-black;
+  color: $text-white;
+  * {
+    color: $text-white;
+  }
+}

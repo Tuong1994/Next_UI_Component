@@ -1,0 +1,100 @@
+.switch {
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  border-radius: $rounded-xxl;
+  background: $bg-slate;
+  transition: all $transition-time-sm $transition-fn;
+  &::after {
+    content: "";
+    border-radius: $rounded-full;
+    background: $bg-white;
+    box-shadow: 0 0 5px $bg-black-rgba-sm;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: all $transition-time-sm $transition-fn;
+  }
+}
+
+// Size
+.switch-sm {
+  width: $w-3;
+  height: $h-1 + 0.5;
+  &::after {
+    width: $w-1 + 0.6;
+    height: $h-1 + 0.6;
+  }
+  &:checked::after {
+    left: $w-1 + 0.5;
+  }
+}
+
+.switch-md {
+  width: $w-4;
+  height: $h-2;
+  &::after {
+    width: $w-2;
+    height: $h-2;
+  }
+  &:checked::after {
+    left: $w-2;
+  }
+}
+
+.switch-lg {
+  width: $w-6;
+  height: $h-3;
+  &::after {
+    width: $w-3;
+    height: $h-3;
+  }
+  &:checked::after {
+    left: $w-3;
+  }
+}
+
+// Color
+.switch-blue {
+  &:checked {
+    background: $bg-blue;
+  }
+}
+
+.switch-red {
+  &:checked {
+    background: $bg-red;
+  }
+}
+
+.switch-green {
+  &:checked {
+    background: $bg-green;
+  }
+}
+
+.switch-orange {
+  &:checked {
+    background: $bg-orange;
+  }
+}
+
+.switch-yellow {
+  &:checked {
+    background: $bg-yellow;
+  }
+}
+
+.switch-purple {
+  &:checked {
+    background: $bg-purple;
+  }
+}
+
+.switch-pink {
+  &:checked {
+    background: $bg-pink;
+  }
+}

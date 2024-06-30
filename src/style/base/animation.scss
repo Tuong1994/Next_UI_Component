@@ -1,0 +1,61 @@
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    top: 30%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    right: -100%;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes dropdown {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+  to {
+    top: calc(100% + 5px);
+    opacity: 1;
+  }
+}
+
+@keyframes dropup {
+  from {
+    bottom: 100%;
+    opacity: 0;
+  }
+  to {
+    bottom: 120%;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,241 @@
+.menu-vertical {
+  width: $w-full;
+  padding: $p-1 - 0.8;
+  .vertical-item {
+    width: $w-full;
+    margin-bottom: $m-1 - 0.5;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .item-tooltip-wrap {
+      width: $w-full;
+    }
+    .item-label {
+      width: $w-full;
+      padding: $p-1;
+      border-radius: $rounded;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all $transition-time-md $transition-fn;
+      * {
+        transition: all $transition-time-md $transition-fn;
+      }
+      &:hover {
+        color: $text-white;
+        * {
+          color: $text-white;
+        }
+      }
+      .label-content {
+        width: $w-full;
+        display: flex;
+        position: relative;
+        .content-icon {
+          margin-right: $m-1 + 0.5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all $transition-time-md $transition-fn;
+        }
+        .content-text {
+          width: $w-full;
+          font-size: $text-xs + 0.1;
+          display: inline-block;
+          overflow: hidden;
+          white-space: nowrap;
+          transition: all $transition-time-md $transition-fn;
+          * {
+            display: inline-block;
+            width: $w-full;
+          }
+        }
+      }
+      .label-arrow {
+        .arrow-icon {
+          transition: transform $transition-time-md $transition-fn;
+        }
+      }
+      .label-arrow-active {
+        .arrow-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .item-label-active {
+      color: $text-white;
+      * {
+        color: $text-white;
+      }
+    }
+    .item-children {
+      margin-left: $m-1 - 0.6;
+      max-height: 0;
+      overflow: hidden;
+      background: $bg-slate;
+      transition: max-height $transition-time-sm $transition-fn;
+    }
+    .item-children-active {
+      max-height: $h-screen !important;
+    }
+  }
+  // Shrinked
+  .vertical-item-shrinked {
+    .item-label-root {
+      .label-content {
+        justify-content: center;
+        .content-icon {
+          margin: 0 $m-1;
+        }
+        .content-text {
+          opacity: 0;
+        }
+      }
+      .label-arrow {
+        opacity: 0;
+      }
+    }
+    .item-children-root {
+      display: none;
+      min-width: max-content;
+      width: $w-10 * 2;
+      max-height: unset;
+      border-radius: $rounded;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 10;
+      transition: all $transition-time-md $transition-fn;
+      .vertical-item {
+        .item-label {
+          border-radius: unset;
+          .label-content {
+            .content-text {
+              opacity: 1;
+              transform: translate(0);
+            }
+          }
+          .label-arrow {
+            opacity: 1;
+          }
+        }
+        .item-children {
+          margin-left: $m-1 - 0.6;
+          max-height: 0;
+          border-radius: unset;
+          height: unset;
+          position: unset;
+          background: $bg-slate;
+        }
+      }
+    }
+    .item-children-root-active {
+      display: block;
+    }
+  }
+}
+
+// Color
+.menu-vertical-blue {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-blue;
+    }
+    .item-label-active {
+      background: $bg-blue;
+    }
+  }
+}
+
+.menu-vertical-red {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-red;
+    }
+    .item-label-active {
+      background: $bg-red;
+    }
+  }
+}
+
+.menu-vertical-green {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-green;
+    }
+    .item-label-active {
+      background: $bg-green;
+    }
+  }
+}
+
+.menu-vertical-orange {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-orange;
+    }
+    .item-label-active {
+      background: $bg-orange;
+    }
+  }
+}
+
+.menu-vertical-yellow {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-yellow;
+    }
+    .item-label-active {
+      background: $bg-yellow;
+    }
+  }
+}
+
+.menu-vertical-purple {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-purple;
+    }
+    .item-label-active {
+      background: $bg-purple;
+    }
+  }
+}
+
+.menu-vertical-pink {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-pink;
+    }
+    .item-label-active {
+      background: $bg-pink;
+    }
+  }
+}
+
+.menu-vertical-black {
+  .vertical-item {
+    .item-label:hover {
+      background: $bg-black;
+    }
+    .item-label-active {
+      background: $bg-black;
+    }
+  }
+}
+
+// Theme
+.menu-vertical-dark {
+  .vertical-item {
+    .item-children {
+      background: $bg-black;
+      .vertical-item {
+        .item-children {
+          background: $bg-deep-blue;
+        }
+      }
+    }
+  }
+}

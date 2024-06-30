@@ -1,0 +1,260 @@
+.tabs {
+  width: $w-full;
+  .tabs-head {
+    width: $w-full;
+    margin-bottom: $m-2;
+    background: $bg-slate;
+    border-top-left-radius: $rounded;
+    border-top-right-radius: $rounded;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: all $transition-time-sm $transition-fn;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    .head-item {
+      min-width: max-content;
+      width: $w-10;
+      height: $h-4;
+      padding: $p-1 - 0.4;
+      transition: all $transition-time-sm $transition-fn;
+      cursor: pointer;
+      .item-inner {
+        height: $h-3;
+        padding: $p-1 - 0.4 $p-1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $rounded-lg;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all $transition-time-xs $transition-fn;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        top: 0.4rem;
+        transform: translate(-50%, 0);
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+        background: $bg-white;
+        box-shadow: 0 0 5px $bg-gray;
+        &::after {
+          content: unset;
+        }
+      }
+    }
+  }
+  .tabs-content {
+    width: $w-full;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    .content-item {
+      width: $w-full;
+      background: $bg-white;
+      opacity: 0;
+      transition: all $transition-time-md $transition-fn;
+    }
+    .content-item-active {
+      opacity: 1;
+      animation: fade $transition-time-md $transition-fn;
+    }
+  }
+}
+
+// Color
+.tabs-blue {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-blue-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-blue;
+        * {
+          color: $text-blue;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-red {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-red-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-red;
+        * {
+          color: $text-red;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-green {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-green-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-green;
+        * {
+          color: $text-green;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-orange {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-orange-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-orange;
+        * {
+          color: $text-orange;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-yellow {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-yellow-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-yellow;
+        * {
+          color: $text-yellow;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-orange {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-orange-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-orange;
+        * {
+          color: $text-orange;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-purple {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-purple-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-purple;
+        * {
+          color: $text-purple;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+.tabs-pink {
+  .tabs-head {
+    .head-item {
+      &:hover .item-inner {
+        background: $bg-pink-rgba-xs;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        color: $text-pink;
+        * {
+          color: $text-pink;
+        }
+      }
+      &:hover .item-inner {
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+// Theme
+.tabs-dark {
+  .tabs-head {
+    background: $bg-black;
+    .head-item {
+      .item-inner {
+        background: $bg-deep-blue;
+      }
+    }
+    .head-item-active {
+      .item-inner {
+        box-shadow: 0 0 5px $bg-black;
+      }
+    }
+  }
+  .tabs-content {
+    .content-item {
+      background: $bg-deep-blue;
+    }
+  }
+}

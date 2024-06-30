@@ -1,0 +1,262 @@
+.checkbox {
+  width: max-content;
+  .checkbox-group {
+    display: flex;
+    .group-control {
+      display: none;
+    }
+    .group-checked {
+      border: 0.5px solid $bg-gray;
+      border-radius: $rounded;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all $transition-time-sm $transition-fn;
+    }
+    .group-label {
+      margin-left: $m-1;
+      .label-required {
+        margin-right: $m-1 - 0.5;
+        color: $text-red;
+      }
+      .label-optional {
+        margin-left: $m-1 - 0.5;
+        color: $text-gray;
+        font-size: $text-xs;
+      }
+    }
+  }
+  .checkbox-group-error {
+    // .group-checked {
+    //   border-color: $bg-red;
+    // }
+    .group-label {
+      color: $text-red;
+      * {
+        color: $text-red;
+      }
+    }
+  }
+  .checkbox-group-disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    &:hover .group-checked {
+      border-color: $bg-gray !important;
+    }
+    .group-checked {
+      border-color: $bg-gray;
+      background: $bg-gray;
+      user-select: none;
+      cursor: not-allowed;
+    }
+    .group-label {
+      color: $text-gray;
+      * {
+        color: $text-gray;
+      }
+    }
+  }
+}
+
+.checkbox-gap {
+  margin-bottom: $m-1 + 0.5;
+}
+
+// Size
+.checkbox-sm {
+  .group-checked {
+    width: $w-2 - 0.5;
+    height: $h-2 - 0.5;
+  }
+  .group-label {
+    font-size: $text-xs;
+    * {
+      font-size: $text-xs;
+    }
+  }
+}
+
+.checkbox-md {
+  .group-checked {
+    width: $w-2;
+    height: $h-2;
+  }
+}
+
+.checkbox-lg {
+  .group-checked {
+    width: $w-2 + 0.5;
+    height: $h-2 + 0.5;
+  }
+  .group-label {
+    font-size: $text-md;
+    * {
+      font-size: $text-md;
+    }
+  }
+}
+
+// Color
+.checkbox-blue {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-blue;
+    }
+  }
+}
+
+.checkbox-red {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-red;
+    }
+  }
+}
+
+.checkbox-green {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-green;
+    }
+  }
+}
+
+.checkbox-orange {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-orange;
+    }
+  }
+}
+
+.checkbox-yellow {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-yellow;
+    }
+  }
+}
+
+.checkbox-purple {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-purple;
+    }
+  }
+}
+
+.checkbox-pink {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-pink;
+    }
+  }
+}
+
+.checkbox-black {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-black;
+    }
+  }
+}
+
+.checkbox-white {
+  .checkbox-group {
+    &:hover .group-checked {
+      border-color: $bg-white;
+    }
+  }
+}
+
+// Checked color
+.checkbox-checked-red {
+  .group-checked {
+    background: $bg-red;
+    border-color: $bg-red !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-blue {
+  .group-checked {
+    background: $bg-blue;
+    border-color: $bg-blue !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-green {
+  .group-checked {
+    background: $bg-green;
+    border-color: $bg-green !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-orange {
+  .group-checked {
+    background: $bg-orange;
+    border-color: $bg-orange !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-yellow {
+  .group-checked {
+    background: $bg-yellow;
+    border-color: $bg-yellow !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-purple {
+  .group-checked {
+    background: $bg-purple;
+    border-color: $bg-purple !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-pink {
+  .group-checked {
+    background: $bg-pink;
+    border-color: $bg-pink !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-black {
+  .group-checked {
+    background: $bg-black;
+    border-color: $bg-black !important;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.checkbox-checked-white {
+  .group-checked {
+    background: $bg-white;
+    border-color: $bg-white !important;
+    * {
+      color: $text-black !important;
+    }
+  }
+}

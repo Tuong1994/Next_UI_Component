@@ -1,0 +1,205 @@
+// Title
+.title {
+  margin-bottom: $m-2;
+  * {
+    margin: 0;
+  }
+}
+
+.title-left {
+  text-align: left;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.title-right {
+  text-align: right;
+}
+
+.title-justify {
+  text-align: justify;
+}
+
+.title-underline {
+  text-decoration: underline;
+  * {
+    text-decoration: underline;
+  }
+}
+
+.title-remove {
+  text-decoration: line-through;
+  * {
+    text-decoration: line-through;
+  }
+}
+
+.title-italic {
+  font-style: italic;
+  * {
+    font-style: italic;
+  }
+}
+
+.title-default {
+  color: $text-black;
+  * {
+    color: $text-black;
+  }
+}
+
+.title-dark {
+  color: $text-white;
+  * {
+    color: $text-white;
+  }
+}
+
+.title-secondary {
+  color: $text-gray !important;
+  * {
+    color: $text-gray !important;
+  }
+}
+
+.title-success {
+  color: $text-green !important;
+  * {
+    color: $text-green !important;
+  }
+}
+
+.title-warning {
+  color: $text-orange !important;
+  * {
+    color: $text-orange !important;
+  }
+}
+
+.title-danger {
+  color: $text-red !important;
+  * {
+    color: $text-red !important;
+  }
+}
+
+.title-1 {
+  font-size: $text-xxl;
+}
+
+.title-2 {
+  font-size: $text-4xl;
+}
+
+.title-3 {
+  font-size: $text-3xl;
+}
+
+.title-4 {
+  font-size: $text-2xl;
+}
+
+.title-5 {
+  font-size: $text-xl;
+}
+
+.title-6 {
+  font-size: $text-lg;
+}
+
+// paragraph
+.paragraph {
+  line-height: $h-1 * 2;
+  * {
+    margin: 0;
+    line-height: $h-1 * 2;
+  }
+}
+
+.paragraph-left {
+  text-align: left;
+}
+
+.paragraph-center {
+  text-align: center;
+}
+
+.paragraph-right {
+  text-align: right;
+}
+
+.paragraph-justify {
+  text-align: justify;
+}
+
+.paragraph-underline {
+  text-decoration: underline;
+  * {
+    text-decoration: underline;
+  }
+}
+
+.paragraph-remove {
+  text-decoration: line-through;
+  * {
+    text-decoration: line-through;
+  }
+}
+
+.paragraph-italic {
+  font-style: italic;
+  * {
+    font-style: italic;
+  }
+}
+
+.paragraph-strong {
+  font-weight: $font-semibold;
+  * {
+    font-weight: $font-semibold;
+  }
+}
+
+.paragraph-default {
+  color: $text-black;
+  * {
+    color: $text-black;
+  }
+}
+
+.paragraph-dark {
+  color: $text-white;
+  * {
+    color: $text-white;
+  }
+}
+
+.paragraph-secondary {
+  color: $text-gray !important;
+  * {
+    color: $text-gray !important;
+  }
+}
+
+.paragraph-success {
+  color: $text-green !important;
+  * {
+    color: $text-green !important;
+  }
+}
+
+.paragraph-warning {
+  color: $text-orange !important;
+  * {
+    color: $text-orange !important;
+  }
+}
+
+.paragraph-danger {
+  color: $text-red !important;
+  * {
+    color: $text-red !important;
+  }
+}

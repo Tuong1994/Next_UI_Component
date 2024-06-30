@@ -1,0 +1,366 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .pagination-content {
+    color: $text-gray;
+    @include respond(mdTablet) {
+      margin-bottom: $m-1;
+    }
+  }
+  .pagination-actions {
+    padding: $p-1 - 0.5;
+    display: flex;
+    align-items: center;
+    .actions-content {
+      margin: 0 $m-1;
+      color: $text-white;
+    }
+    .actions-button,
+    .actions-dot {
+      width: $w-3;
+      height: $h-3;
+      margin: 0 $m-1 - 0.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: unset;
+      color: $text-white;
+      transition: all $transition-time-md $transition-fn;
+      * {
+        color: $text-white;
+      }
+    }
+    .actions-button {
+      &:hover {
+        background: $bg-white;
+        color: $text-black;
+        * {
+          color: $text-black;
+        }
+      }
+    }
+    .actions-button-active {
+      background: $bg-white;
+      color: $text-black;
+      * {
+        color: $text-black;
+      }
+    }
+    .actions-button-disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      &:hover {
+        background: transparent;
+        color: $text-white;
+        * {
+          color: $text-white;
+        }
+      }
+    }
+  }
+  @include respond(mdTablet) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include respond(mdPhone) {
+    justify-content: center;
+  }
+}
+
+// Justify
+.pagination-justify {
+  justify-content: space-between;
+}
+
+// Shape
+.pagination-round {
+  .pagination-actions {
+    border-radius: $rounded-xxl;
+    .actions-button,
+    .actions-dot {
+      border-radius: $rounded-full;
+    }
+  }
+}
+
+.pagination-square {
+  .pagination-actions {
+    border-radius: $rounded;
+    .actions-button,
+    .actions-dot {
+      border-radius: $rounded;
+    }
+  }
+}
+
+// Theme
+.pagination-dark.pagination-ghost {
+  .pagination-actions {
+    .actions-content {
+      color: $text-white;
+    }
+    .actions-button,
+    .actions-dot {
+      color: $text-white;
+      * {
+        color: $text-white;
+      }
+    }
+  }
+}
+
+// Color
+.pagination-blue {
+  .pagination-actions {
+    background: $bg-blue;
+  }
+}
+
+.pagination-red {
+  .pagination-actions {
+    background: $bg-red;
+  }
+}
+
+.pagination-green {
+  .pagination-actions {
+    background: $bg-green;
+  }
+}
+
+.pagination-orange {
+  .pagination-actions {
+    background: $bg-orange;
+  }
+}
+
+.pagination-yellow {
+  .pagination-actions {
+    background: $bg-yellow;
+  }
+}
+
+.pagination-purple {
+  .pagination-actions {
+    background: $bg-purple;
+  }
+}
+
+.pagination-pink {
+  .pagination-actions {
+    background: $bg-pink;
+  }
+}
+
+.pagination-black {
+  .pagination-actions {
+    background: $bg-black;
+  }
+}
+
+// Ghost
+.pagination-ghost {
+  .pagination-actions {
+    background: transparent;
+    .actions-content {
+      color: $text-black;
+    }
+    .actions-button,
+    .actions-dot {
+      color: $text-black;
+      border: 0.5px solid transparent;
+      * {
+        color: $text-black;
+      }
+      &:hover {
+        background: transparent;
+      }
+    }
+    .actions-button-active {
+      background: transparent;
+    }
+    .actions-button-disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      &:hover {
+        background: transparent;
+        border-color: transparent !important;
+        color: $text-black !important;
+        * {
+          color: $text-black !important;
+        }
+      }
+    }
+  }
+}
+
+.pagination-ghost-blue {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-blue;
+        color: $text-blue;
+        * {
+          color: $text-blue;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-blue;
+      color: $text-blue !important;
+      * {
+        color: $text-blue !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-red {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-red;
+        color: $text-red;
+        * {
+          color: $text-red;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-red;
+      color: $text-red !important;
+      * {
+        color: $text-red !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-green {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-green;
+        color: $text-green;
+        * {
+          color: $text-green;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-green;
+      color: $text-green !important;
+      * {
+        color: $text-green !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-orange {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-orange;
+        color: $text-orange;
+        * {
+          color: $text-orange;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-orange;
+      color: $text-orange !important;
+      * {
+        color: $text-orange !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-yellow {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-yellow;
+        color: $text-yellow;
+        * {
+          color: $text-yellow;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-yellow;
+      color: $text-yellow !important;
+      * {
+        color: $text-yellow !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-purple {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-purple;
+        color: $text-purple;
+        * {
+          color: $text-purple;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-purple;
+      color: $text-purple !important;
+      * {
+        color: $text-purple !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-pink {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-pink;
+        color: $text-pink;
+        * {
+          color: $text-pink;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-pink;
+      color: $text-pink !important;
+      * {
+        color: $text-pink !important;
+      }
+    }
+  }
+}
+
+.pagination-ghost-black {
+  .pagination-actions {
+    .actions-button {
+      &:hover {
+        border-color: $bg-black;
+        color: $text-black;
+        * {
+          color: $text-black;
+        }
+      }
+    }
+    .actions-button-active {
+      border-color: $bg-black;
+      color: $text-black !important;
+      * {
+        color: $text-black !important;
+      }
+    }
+  }
+}

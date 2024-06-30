@@ -1,0 +1,144 @@
+.carousel-gallery {
+  background: $bg-black-rgba-md;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-time-md $transition-fn;
+  .gallery-view {
+    width: $w-full;
+    height: $h-screen;
+    position: relative;
+    transition: width $transition-time-sm $transition-fn;
+    &:hover .carousel-action {
+      &:nth-child(1) {
+        left: 20px;
+      }
+      &:nth-child(2) {
+        right: 20px;
+      }
+    }
+    .view-head {
+      width: $w-full;
+      height: $h-5;
+      padding: 0 $p-2;
+      background: $bg-black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .head-content {
+        color: $text-white;
+      }
+      .head-action {
+        display: flex;
+        align-items: center;
+        .action-icon {
+          margin: 0 $m-1;
+          cursor: pointer;
+          transition: opacity $transition-time-md $transition-fn;
+          &:hover {
+            opacity: 0.6;
+          }
+          path {
+            color: $text-white;
+          }
+        }
+      }
+    }
+    .carousel-action {
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(2) {
+        right: 0;
+      }
+    }
+    .carousel-view {
+      width: $w-full;
+      height: calc($h-full - $h-5);
+      display: flex;
+      .view-item {
+        width: $w-full;
+        height: $h-full;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .item-content {
+          width: $w-10 * 6;
+          height: $h-10 * 4;
+          border-radius: $rounded;
+          object-fit: cover;
+          @include respond(lgTablet) {
+            width: calc($w-full - $w-10);
+          }
+          @include respond(smTablet) {
+            width: calc($w-full - $w-10 * 2);
+            height: $h-10 * 3;
+          }
+          @include respond(mdPhone) {
+            width: calc($w-full - $w-2);
+            height: $h-10 * 2;
+          }
+        }
+      }
+    }
+  }
+  .gallery-list {
+    width: 0;
+    height: $h-full;
+    padding: $p-1 0;
+    background: $bg-white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 10px;
+    transition: all $transition-time-sm $transition-fn;
+    .list-item {
+      width: $w-10 * 1.3 !important;
+      height: $h-10 * 1.3 !important;
+      opacity: 0.5;
+      cursor: pointer;
+      object-fit: cover;
+      border-radius: $rounded;
+      transition: opacity $transition-time-sm $transition-fn;
+      @include respond(mdTablet) {
+        width: $w-7 !important;
+        height: $h-7 !important;
+      }
+    }
+    .list-item-active {
+      opacity: 1;
+    }
+  }
+}
+
+.carousel-gallery-list-active {
+  .gallery-view {
+    width: calc($w-full - $w-10 * 3);
+    @include respond(mdTablet) {
+      width: calc($w-full - $w-10);
+    }
+  }
+  .gallery-list {
+    width: $w-10 * 3;
+    padding: $p-1;
+    @include respond(mdTablet) {
+      width: $w-10;
+    }
+  }
+}
+
+.carousel-gallery-active {
+  opacity: 1;
+  visibility: visible;
+  animation: fade $transition-time-md $transition-fn;
+}

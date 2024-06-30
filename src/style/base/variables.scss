@@ -1,0 +1,141 @@
+$bg-white: #fff;
+$bg-black: #111;
+$bg-slate: #e2e8f0;
+$bg-gray: #d1d5db;
+$bg-blue: #0ea5e9;
+$bg-red: #f43f5e;
+$bg-green: #10b981;
+$bg-orange: #f59e0b;
+$bg-yellow: #eab308;
+$bg-purple: #6366f1;
+$bg-pink: #ec4899;
+$bg-deep-blue: #1e293b;
+$bg-light-blue: #38bdf8;
+
+$bg-white-rgba-xs: rgba(225, 225, 225, 0.2);
+$bg-white-rgba-sm: rgba(225, 225, 225, 0.4);
+$bg-white-rgba-md: rgba(225, 225, 225, 0.6);
+$bg-white-rgba-lg: rgba(225, 225, 225, 0.8);
+
+$bg-black-rgba-xs: rgba(0, 0, 0, 0.2);
+$bg-black-rgba-sm: rgba(0, 0, 0, 0.4);
+$bg-black-rgba-md: rgba(0, 0, 0, 0.6);
+$bg-black-rgba-lg: rgba(0, 0, 0, 0.8);
+
+$bg-blue-rgba-xs: rgba(14, 165, 233, 0.2);
+$bg-blue-rgba-sm: rgba(14, 165, 233, 0.4);
+$bg-blue-rgba-md: rgba(14, 165, 233, 0.6);
+$bg-blue-rgba-lg: rgba(14, 165, 233, 0.8);
+
+$bg-red-rgba-xs: rgba(244, 63, 94, 0.2);
+$bg-red-rgba-sm: rgba(244, 63, 94, 0.4);
+$bg-red-rgba-md: rgba(244, 63, 94, 0.6);
+$bg-red-rgba-lg: rgba(244, 63, 94, 0.8);
+
+$bg-green-rgba-xs: rgba(16, 185, 129, 0.2);
+$bg-green-rgba-sm: rgba(16, 185, 129, 0.4);
+$bg-green-rgba-md: rgba(16, 185, 129, 0.6);
+$bg-green-rgba-lg: rgba(16, 185, 129, 0.8);
+
+$bg-orange-rgba-xs: rgba(245, 158, 11, 0.2);
+$bg-orange-rgba-sm: rgba(245, 158, 11, 0.4);
+$bg-orange-rgba-md: rgba(245, 158, 11, 0.6);
+$bg-orange-rgba-lg: rgba(245, 158, 11, 0.8);
+
+$bg-yellow-rgba-xs: rgba(234, 179, 8, 0.2);
+$bg-yellow-rgba-sm: rgba(234, 179, 8, 0.4);
+$bg-yellow-rgba-md: rgba(234, 179, 8, 0.6);
+$bg-yellow-rgba-lg: rgba(234, 179, 8, 0.8);
+
+$bg-purple-rgba-xs: rgba(99, 102, 241, 0.2);
+$bg-purple-rgba-sm: rgba(99, 102, 241, 0.4);
+$bg-purple-rgba-md: rgba(99, 102, 241, 0.6);
+$bg-purple-rgba-lg: rgba(99, 102, 241, 0.8);
+
+$bg-pink-rgba-xs: rgba(236, 72, 153, 0.2);
+$bg-pink-rgba-sm: rgba(236, 72, 153, 0.4);
+$bg-pink-rgba-md: rgba(236, 72, 153, 0.6);
+$bg-pink-rgba-lg: rgba(236, 72, 153, 0.8);
+
+$text-black: #111;
+$text-white: #fff;
+$text-slate: #cbd5e1;
+$text-gray: #9ca3af;
+$text-blue: #0ea5e9;
+$text-red: #f43f5e;
+$text-green: #10b981;
+$text-orange: #f59e0b;
+$text-yellow: #eab308;
+$text-purple: #6366f1;
+$text-pink: #ec4899;
+
+$text-xxs: 1.1rem;
+$text-xs: 1.2rem;
+$text-2xs: 1.3rem;
+$text-sm: 1.4rem;
+$text-md: 1.6rem;
+$text-lg: 1.8rem;
+$text-xl: 2rem;
+$text-2xl: 2.2rem;
+$text-3xl: 2.4rem;
+$text-4xl: 2.6rem;
+$text-xxl: 2.8rem;
+
+$font-thin: 100;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+$w-1: 1rem;
+$w-2: 2rem;
+$w-3: 3rem;
+$w-4: 4rem;
+$w-5: 5rem;
+$w-6: 6rem;
+$w-7: 7rem;
+$w-8: 8rem;
+$w-9: 9rem;
+$w-10: 10rem;
+$w-full: 100%;
+$w-screen: 100vw;
+
+$h-1: 1rem;
+$h-2: 2rem;
+$h-3: 3rem;
+$h-4: 4rem;
+$h-5: 5rem;
+$h-6: 6rem;
+$h-7: 7rem;
+$h-8: 8rem;
+$h-9: 9rem;
+$h-10: 10rem;
+$h-full: 100%;
+$h-screen: 100vh;
+
+$m-1: 1rem;
+$m-2: 2rem;
+$m-3: 3rem;
+$m-4: 4rem;
+$m-5: 5rem;
+
+$p-1: 1rem;
+$p-2: 2rem;
+$p-3: 3rem;
+$p-4: 4rem;
+$p-5: 5rem;
+
+$rounded: 0.4rem;
+$rounded-md: 0.6rem;
+$rounded-lg: 0.8rem;
+$rounded-xxl: 5rem;
+$rounded-full: 100%;
+
+$transition-time-xs: 0.2s;
+$transition-time-sm: 0.4s;
+$transition-time-md: 0.6s;
+$transition-time-lg: 0.8s;
+$transition-time-xl: 1s;
+
+$transition-fn: ease;

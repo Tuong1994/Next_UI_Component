@@ -1,0 +1,147 @@
+.side {
+  width: $w-10 * 2.5;
+  height: $h-screen;
+  border-right: 0.5px solid transparent;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: all $transition-time-sm $transition-fn;
+  .side-content {
+    height: $h-full;
+    padding: $p-2 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .side-action {
+    width: $w-10 * 2.5;
+    height: $h-6;
+    padding: $p-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    transition: all $transition-time-sm $transition-fn;
+    .action-btn {
+      width: $w-full;
+      svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  @include respond(mdTablet) {
+    left: -100%;
+    z-index: 20;
+  }
+}
+
+.side-collapsable {
+  .side-content {
+    height: calc($h-full - $h-6);
+    @include respond(mdTablet) {
+      height: $h-full;
+    }
+  }
+}
+
+// Shrinked
+.side-shrinked {
+  width: $w-6;
+  .side-content {
+    overflow: unset;
+  }
+  .side-action {
+    width: $w-6;
+  }
+}
+
+// layout
+.side-layout {
+  padding-top: $p-1 * 6;
+  @include respond(mdTablet) {
+    padding: $p-1 0;
+  }
+}
+
+// Theme
+.side-light {
+  background: $bg-white;
+  border-color: $bg-gray;
+  .side-action {
+    background: $bg-white;
+  }
+}
+
+.side-dark {
+  background: $bg-deep-blue;
+  border-color: transparent;
+  box-shadow: 2px 0 5px $bg-black;
+  color: $text-white;
+  * {
+    color: $text-white;
+  }
+  .side-action {
+    background: $bg-deep-blue;
+  }
+}
+
+// Mobile
+.side-show {
+  @include respond(mdTablet) {
+    left: 0;
+  }
+}
+
+.side-mobile-btn {
+  width: $w-3;
+  height: $h-3;
+  border-radius: unset !important;
+  border-top-right-radius: $rounded !important;
+  border-bottom-right-radius: $rounded !important;
+  position: fixed !important;
+  top: 1rem;
+  left: 0;
+  z-index: 15;
+  * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.side-mobile-btn-top {
+  top: 7rem;
+}
+
+// Mobile backdrop
+.side-mobile-backdrop {
+  background: $bg-black-rgba-md;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 19;
+  transition: all $transition-time-sm $transition-fn;
+  .backdrop-close-btn {
+    border: unset;
+    background: transparent;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.side-mobile-backdrop-active {
+  opacity: 1;
+  visibility: visible;
+  animation: fade $transition-time-sm $transition-fn;
+}

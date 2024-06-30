@@ -1,0 +1,31 @@
+.carousel-vertical {
+  &:hover .carousel-action {
+    &:nth-child(1) {
+      top: 35%;
+    }
+    &:nth-child(2) {
+      bottom: 35%;
+    }
+  }
+  .carousel-action {
+    left: 20px;
+    z-index: 1;
+    &:nth-child(1) {
+      top: 30%;
+    }
+    &:nth-child(2) {
+      bottom: 30%;
+    }
+  }
+  .carousel-dots {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    .dots-item {
+      margin: $m-1 - 0.5 0;
+    }
+    .dots-item-active {
+      height: $h-2;
+    }
+  }
+}

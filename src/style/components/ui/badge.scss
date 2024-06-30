@@ -1,0 +1,136 @@
+.badge {
+  width: max-content;
+  padding: $p-1 - 0.8 $p-1 - 0.4;
+  border: 0.5px solid $bg-gray;
+  background: $bg-slate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $text-xxs;
+  transition: all $transition-time-sm $transition-fn;
+  * {
+    font-size: $text-xxs;
+  }
+}
+
+// Shape
+.badge-round {
+  border-radius: $rounded-xxl;
+}
+
+.badge-square {
+  border-radius: $rounded;
+}
+
+// Color
+.badge-color {
+  color: $text-white;
+  * {
+    color: $text-white;
+  }
+}
+
+.badge-blue {
+  border-color: $bg-blue;
+  background: $bg-blue;
+}
+
+.badge-red {
+  border-color: $bg-red;
+  background: $bg-red;
+}
+
+.badge-green {
+  border-color: $bg-green;
+  background: $bg-green;
+}
+
+.badge-orange {
+  border-color: $bg-orange;
+  background: $bg-orange;
+}
+
+.badge-yellow {
+  border-color: $bg-yellow;
+  background: $bg-yellow;
+}
+
+.badge-purple {
+  border-color: $bg-purple;
+  background: $bg-purple;
+}
+
+.badge-pink {
+  border-color: $bg-pink;
+  background: $bg-pink;
+}
+
+.badge-black {
+  border-color: $bg-black;
+  background: $bg-black;
+}
+
+// Ghost
+.badge-ghost {
+  background: $bg-white;
+}
+
+.badge-dark.badge-ghost {
+  background: $bg-deep-blue;
+}
+
+.badge-ghost-blue {
+  border-color: $bg-blue;
+  color: $text-blue;
+  * {
+    color: $text-blue;
+  }
+}
+
+.badge-ghost-red {
+  border-color: $bg-red;
+  color: $text-red;
+  * {
+    color: $text-red;
+  }
+}
+
+.badge-ghost-green {
+  border-color: $bg-green;
+  color: $text-green;
+  * {
+    color: $text-green;
+  }
+}
+
+.badge-ghost-orange {
+  border-color: $bg-orange;
+  color: $text-orange;
+  * {
+    color: $text-orange;
+  }
+}
+
+.badge-ghost-yellow {
+  border-color: $bg-yellow;
+  color: $text-yellow;
+  * {
+    color: $text-yellow;
+  }
+}
+
+.badge-ghost-purple {
+  border-color: $bg-purple;
+  color: $text-purple;
+  * {
+    color: $text-purple;
+  }
+}
+
+.badge-ghost-pink {
+  border-color: $bg-pink;
+  color: $text-pink;
+  * {
+    color: $text-pink;
+  }
+}

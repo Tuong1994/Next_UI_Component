@@ -1,0 +1,70 @@
+.drawer-backdrop {
+  width: $w-full;
+  height: $h-screen;
+  background: $bg-black-rgba-md;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity $transition-time-sm $transition-fn;
+}
+
+.drawer-backdrop-active {
+  opacity: 1;
+  animation: fade $transition-time-sm $transition-fn;
+}
+
+.drawer {
+  width: calc($w-full - 70%);
+  height: $h-screen;
+  background: $bg-white;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 15;
+  opacity: 0;
+  transition: all $transition-time-sm $transition-fn;
+  .drawer-head {
+    padding: $p-1 $p-2;
+    height: $h-5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid $bg-gray;
+    .head-icon {
+      cursor: pointer;
+      path {
+        transition: all $transition-time-md $transition-fn;
+      }
+      &:hover path {
+        opacity: 0.6;
+      }
+    }
+  }
+  .drawer-body {
+    padding: $p-2;
+    height: calc($h-screen - $h-5);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .drawer-body-height-full {
+    height: $h-screen;
+  }
+  @include respond(mdTablet) {
+    width: calc($w-full - 60%);
+  }
+  @include respond(mdPhone) {
+    width: calc($w-full - 20%);
+  }
+}
+
+.drawer-full {
+  width: $w-full;
+}
+
+.drawer-active {
+  opacity: 1;
+  right: 0;
+  animation: fadeInRight $transition-time-sm $transition-fn;
+}

@@ -1,0 +1,272 @@
+.tooltip {
+  width: max-content;
+  position: relative;
+  .tooltip-title {
+    position: relative;
+    &:hover .title-arrow,
+    &:hover ~ .tooltip-content {
+      opacity: 1;
+      visibility: visible;
+    }
+    .title-arrow {
+      opacity: 0;
+      visibility: hidden;
+      border: 8px solid transparent;
+      position: absolute;
+      z-index: 5;
+      transition: opacity $transition-time-md $transition-fn;
+    }
+  }
+  .tooltip-content {
+    width: max-content;
+    max-width: $w-10 * 2;
+    padding: $p-1 - 0.4;
+    border-radius: $rounded;
+    background: $bg-black;
+    font-size: $text-xs;
+    color: $text-white;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 5;
+    transition: opacity $transition-time-md $transition-fn;
+    * {
+      font-size: $text-xs;
+      color: $text-white;
+    }
+  }
+}
+
+// Placement
+.tooltip-left {
+  .tooltip-title {
+    .title-arrow {
+      top: 50%;
+      left: -12px;
+      transform: translateY(-50%);
+    }
+    .title-arrow-blue {
+      border-left-color: $bg-blue;
+    }
+
+    .title-arrow-red {
+      border-left-color: $bg-red;
+    }
+
+    .title-arrow-green {
+      border-left-color: $bg-green;
+    }
+
+    .title-arrow-orange {
+      border-left-color: $bg-orange;
+    }
+
+    .title-arrow-yellow {
+      border-left-color: $bg-yellow;
+    }
+
+    .title-arrow-purple {
+      border-left-color: $bg-purple;
+    }
+
+    .title-arrow-pink {
+      border-left-color: $bg-pink;
+    }
+
+    .title-arrow-black {
+      border-left-color: $bg-black;
+    }
+  }
+  .tooltip-content {
+    top: 50%;
+    right: calc(100% + 12px);
+    transform: translateY(-50%);
+  }
+}
+
+.tooltip-right {
+  .tooltip-title {
+    .title-arrow {
+      top: 50%;
+      right: -12px;
+      transform: translateY(-50%);
+    }
+    .title-arrow-blue {
+      border-right-color: $bg-blue;
+    }
+
+    .title-arrow-red {
+      border-right-color: $bg-red;
+    }
+
+    .title-arrow-green {
+      border-right-color: $bg-green;
+    }
+
+    .title-arrow-orange {
+      border-right-color: $bg-orange;
+    }
+
+    .title-arrow-yellow {
+      border-right-color: $bg-yellow;
+    }
+
+    .title-arrow-purple {
+      border-right-color: $bg-purple;
+    }
+
+    .title-arrow-pink {
+      border-right-color: $bg-pink;
+    }
+
+    .title-arrow-black {
+      border-right-color: $bg-black;
+    }
+  }
+  .tooltip-content {
+    top: 50%;
+    left: calc(100% + 12px);
+    transform: translateY(-50%);
+  }
+}
+
+.tooltip-top {
+  .tooltip-title {
+    .title-arrow {
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .title-arrow-blue {
+      border-top-color: $bg-blue;
+    }
+
+    .title-arrow-red {
+      border-top-color: $bg-red;
+    }
+
+    .title-arrow-green {
+      border-top-color: $bg-green;
+    }
+
+    .title-arrow-orange {
+      border-top-color: $bg-orange;
+    }
+
+    .title-arrow-yellow {
+      border-top-color: $bg-yellow;
+    }
+
+    .title-arrow-purple {
+      border-top-color: $bg-purple;
+    }
+
+    .title-arrow-pink {
+      border-top-color: $bg-pink;
+    }
+
+    .title-arrow-black {
+      border-top-color: $bg-black;
+    }
+  }
+  .tooltip-content {
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%);
+  }
+}
+
+.tooltip-bottom {
+  .tooltip-title {
+    .title-arrow {
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .title-arrow-blue {
+      border-bottom-color: $bg-blue;
+    }
+
+    .title-arrow-red {
+      border-bottom-color: $bg-red;
+    }
+
+    .title-arrow-green {
+      border-bottom-color: $bg-green;
+    }
+
+    .title-arrow-orange {
+      border-bottom-color: $bg-orange;
+    }
+
+    .title-arrow-yellow {
+      border-bottom-color: $bg-yellow;
+    }
+
+    .title-arrow-purple {
+      border-bottom-color: $bg-purple;
+    }
+
+    .title-arrow-pink {
+      border-bottom-color: $bg-pink;
+    }
+
+    .title-arrow-black {
+      border-bottom-color: $bg-black;
+    }
+  }
+  .tooltip-content {
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+  }
+}
+
+// Color
+.tooltip-blue {
+  .tooltip-content {
+    background: $bg-blue;
+  }
+}
+
+.tooltip-red {
+  .tooltip-content {
+    background: $bg-red;
+  }
+}
+
+.tooltip-green {
+  .tooltip-content {
+    background: $bg-green;
+  }
+}
+
+.tooltip-orange {
+  .tooltip-content {
+    background: $bg-orange;
+  }
+}
+
+.tooltip-yellow {
+  .tooltip-content {
+    background: $bg-yellow;
+  }
+}
+
+.tooltip-purple {
+  .tooltip-content {
+    background: $bg-purple;
+  }
+}
+
+.tooltip-pink {
+  .tooltip-content {
+    background: $bg-pink;
+  }
+}
+
+.tooltip-black {
+  .tooltip-content {
+    background: $bg-black;
+  }
+}
